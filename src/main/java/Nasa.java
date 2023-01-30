@@ -4,7 +4,7 @@ public class Nasa {
 
     private final String copyright;
     private final String date;
-    private final String explanacion;
+    private final String explanation;
     private final String hdurl;
     private final String media_type;
     private final String service_version;
@@ -14,7 +14,7 @@ public class Nasa {
     public Nasa(
             @JsonProperty("copyright") String copyright,
             @JsonProperty("date") String date,
-            @JsonProperty("explanacion") String explanacion,
+            @JsonProperty("explanation") String explanation,
             @JsonProperty("hdurl") String hdurl,
             @JsonProperty("media_type") String media_type,
             @JsonProperty("service_version") String service_version,
@@ -23,7 +23,7 @@ public class Nasa {
     ) {
         this.copyright = copyright;
         this.date = date;
-        this.explanacion = explanacion;
+        this.explanation = explanation;
         this.hdurl = hdurl;
         this.media_type = media_type;
         this.service_version = service_version;
@@ -39,8 +39,8 @@ public class Nasa {
         return date;
     }
 
-    public String getExplanacion() {
-        return explanacion;
+    public String getExplanation() {
+        return explanation;
     }
 
     public String getHdurl() {
@@ -65,15 +65,12 @@ public class Nasa {
 
     @Override
     public String toString() {
-        return "Nasa{" +
-                "copyright='" + copyright + '\'' +
-                ", date='" + date + '\'' +
-                ", explanacion='" + explanacion + '\'' +
-                ", hdurl='" + hdurl + '\'' +
-                ", media_type='" + media_type + '\'' +
-                ", service_version='" + service_version + '\'' +
-                ", title='" + title + '\'' +
-                ", url='" + url + '\'' +
-                '}';
+        return "Nasa: \n" +
+                "Date of publication: " + date + "\n" +
+                "Explanation: " + explanation + "\n" +
+                "Hdurl: " + hdurl + "\n" +
+                "Media_type: " + media_type + "\n" +
+                "Title: " + title + "\n" +
+                "Url: " + url;
     }
 }
